@@ -44,3 +44,7 @@
 .recording .ion-ios-circle-outline:before {
 	color:#b2b2b2;
 }
+
+.item-header {
+	float: right;
+}

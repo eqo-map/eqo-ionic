@@ -1,4 +1,4 @@
-angular.module('starter.controllers', ['ngCordova.plugins.media'])
+angular.module('starter.controllers', [])
 
 .controller('MapCtrl', function($scope, $ionicModal) {
   var platform = new H.service.Platform({
@@ -84,39 +84,32 @@ angular.module('starter.controllers', ['ngCordova.plugins.media'])
 })
 
 
-.controller('RecordCtrl', function($scope, $interval, $cordovaMedia) {
+.controller('RecordCtrl', function($scope, $interval, $ionicLoading, $timeout, $ionicModal) {
   $scope.recording = false;
   $scope.text = 'Start recording';
   $scope.time = 0;
 
-
-  //if (ionic.Platform.platform() == 'android' || ionic.Platform.platform() == 'ios') {
-    var src = cordova.file.cacheDirectory + 'recording.mp3';
-    var media = $cordovaMedia.newMedia(
-      src, 
-      function(){console.log('recording success');},
-      function(error){console.log('recording fail', error);}
-    );
-  //}
-
-  
+  $ionicModal.fromTemplateUrl('templates/modal-upload.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });  
 
   $scope.record = function(){
-    console.log('record...');
     $scope.recording = !$scope.recording;
-    if (ionic.Platform.platform() == 'android' || ionic.Platform.platform() == 'ios') {
-      if ($scope.recording) {
-        var x = media.startRecord();
-      } else {
-        var x = media.stopRecord();
-        media.play();
-        $scope.info = media;
-        $scope.info2 = x;
-      }
-    }
-    console.log(x);
 
     $scope.text = $scope.recording ? 'Stop recording' : 'Start recording';
+  };
+
+  $scope.upload = function(){
+    $ionicLoading.show({
+      template: 'Uploading...'
+    });
+    $timeout(function(){
+      $ionicLoading.hide();
+      $scope.modal.show();
+    },500);
   };
 
   $interval(function(){

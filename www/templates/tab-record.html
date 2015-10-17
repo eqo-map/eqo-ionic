@@ -15,10 +15,42 @@
 			</button>
 		  </div>
 		</div>
-		<div>
-			Info:{{info}}
-			Info2:{{info2}}
-		</div>
+  <button class="button button-full button-positive">
+  Play
+</button>
+
+<div class="item range">
+  <input type="range" name="volume">
+</div>
+
+<div class="list">
+  <label class="item item-input">
+    <input type="text" placeholder="Title">
+  </label>
+  <label class="item item-input">
+    <textarea placeholder="Description"></textarea>
+  </label>
+  <div class="list">
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Pin to current location
+  </li>
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Select location from map
+  </li>
+
+</div>
+  <button ng-click="upload()" class="button button-full button-balanced">
+  Upload
+</button>
+</div>
 	  </div>
   	</div>
   </ion-content>

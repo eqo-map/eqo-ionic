@@ -1,0 +1,62 @@
+<ion-modal-view class="modal-story">
+	<ion-header-bar>
+		<button ng-click="closeModal()" class="button icon-left ion-chevron-left button-clear button-positive">Back</button>
+  <div class="h1 title">Upload</div>
+	</ion-header-bar>
+	<ion-content class="padded">
+	  	<ul class="list">
+
+  <li class="item item-toggle">
+     Private
+     <label class="toggle toggle-balanced">
+       <input type="checkbox" checked>
+       <div class="track">
+         <div class="handle"></div>
+       </div>
+     </label>
+  </li>
+</ul>
+
+  <div class="list list-inset">
+  <label class="item item-input">
+    <i class="icon ion-search placeholder-icon"></i>
+    <input type="text" placeholder="Search">
+  </label>
+</div>
+
+  <ul class="list">
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Matus Vacula
+  </li>
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     John Snow
+  </li>
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     James Bond
+  </li>
+
+  <li class="item item-checkbox">
+     <label class="checkbox">
+       <input type="checkbox">
+     </label>
+     Your mother
+  </li>
+
+</ul>
+<button ng-click="share()" class="button button-full button-balanced">
+  Share
+</button>
+	</ion-content>
+</ion-modal-view>
