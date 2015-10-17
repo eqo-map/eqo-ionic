@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+.story-user img {
+	width: 33%;
+	height: 33%;
+	float: left;
+}
+
+.H_ib_body {
+	background-color: white;
+	color: #333;
+}
+
+.story-title a, .story-title a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.padded {
+	padding: 10px;
+}
+
+.modal-story h2 {
+	font-size: 24px;
+}
+
+.modal-story p {
+	font-size: 18px;
+}
+
+.recording-info {
+	float: right;
+}
+
+.recording-timing {
+	font-size: 24px;
+}
+
+.recording .ion-ios-circle-filled:before {
+	color:red;
+}
+
+
+
+.recording .ion-ios-circle-outline:before {
+	color:#b2b2b2;
+}

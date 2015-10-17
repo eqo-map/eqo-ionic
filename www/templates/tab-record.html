@@ -1,0 +1,25 @@
+<ion-view view-title="Record">
+  <ion-content>
+    <div class="card recording">
+
+	  <div class="item item-text-wrap">
+	  	<div class="row">
+		  <div class="col col-66">
+		  	<button ng-click="record()" ng-bind="text" ng-class="{'ion-ios-circle-filled': recording, 'ion-ios-circle-outline': !recording}" class="button icon-left ion-ios-circle-filled">
+		  		Start recording
+		  	</button>
+		  </div>
+		  <div class="col">
+		  	<button class="recording-timing button button-right button-light">
+			  {{time|recordingTime}}
+			</button>
+		  </div>
+		</div>
+		<div>
+			Info:{{info}}
+			Info2:{{info2}}
+		</div>
+	  </div>
+  	</div>
+  </ion-content>
+</ion-view>
