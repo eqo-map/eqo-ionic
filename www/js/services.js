@@ -20,7 +20,7 @@ angular.module('starter.services', [])
     },
     {
       id: 1,
-      title: 'History of Brandenburger Tor',
+      title: 'History of Brandenburg',
       description: '',
       geo: {
         lat:52.5159, lng:13.3777
@@ -104,27 +104,27 @@ angular.module('starter.services', [])
     id: 0,
     name: 'Miranda Kerr',
     username: 'mirr1',
-    face: 'http://img2.rnkr-static.com/list_img/5210/925210/C300/hottest-women-with-dimples-u2.jpg'
+    face: 'img/woman2.jpg'
   }, {
     id: 1,
     name: 'Max Lynx',
     username: 'lynx_j',
-    face: 'https://avatars3.githubusercontent.com/u/11214?v=3&s=460'
+    face: 'img/man2.jpeg'
   }, {
     id: 2,
     name: 'Adam Bradleyson',
     username: '4d4m',
-    face: 'https://pbs.twimg.com/profile_images/479090794058379264/84TKj_qa.jpeg'
+    face: 'img/man3.jpeg'
   }, {
     id: 3,
     name: 'Perry Governor',
-    username: 'perry_gov',
-    face: 'https://pbs.twimg.com/profile_images/598205061232103424/3j5HUXMY.png'
+    username: 'perry_1',
+    face: 'img/man4.png'
   }, {
     id: 4,
     name: 'Jessica Harrington',
     username: 'jess66',
-    face: 'http://www.fashionihub.com/wp-content/uploads/2010/10/Best-Perfumes-For-Women.jpg'
+    face: 'img/woman1.jpg'
   }];
 
   return {

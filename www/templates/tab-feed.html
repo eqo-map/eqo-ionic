@@ -3,9 +3,13 @@
     <div class="feed-list list card">
 
       <div ng-repeat="story in stories" class="item">
-        <div class="item-header">
+        <div class="item-header row">
+        <div class="col col-75">
           <p>{{story.title}}</p>
-          <div style="clear:both;"></div>
+        </div>
+        <div class="col col-25">
+          <span class="ago">{{story.posted}}</span>
+        </div>
         </div>
         <div class="item-user">
           
@@ -16,71 +20,10 @@
           <a class="button button-clear ion-heart icon-left">{{story.likes}}</a>
           <a class="button button-clear ion-chatbubbles icon-left">{{story.comments}}</a>
           <a class="button button-clear icon-left" ng-class="{'ion-ios-locked':story.private, 'ion-ios-unlocked': !story.private}"></a>
-          <span class="ago">{{story.posted}}</span>
+          
         </div>
       </div>
-      <div class="item">
-        <div class="item-header">
-          <span>Berlin</span>
-          <p>1m ago</p>
-          <div style="clear:both;"></div>
-        </div>
-        <p>
-          <a class="button button-clear ion-heart icon-left">1</a>
-          <a class="button button-clear ion-chatbubbles icon-left">5</a>
-          <a class="button button-clear ion-ios-locked icon-left"></a>
-        </p>
-      </div>
-      <div class="item">
-        <div class="item-header">
-          <span>Berlin</span>
-          <p>1m ago</p>
-          <div style="clear:both;"></div>
-        </div>
-        <p>
-          <a class="button button-clear ion-heart icon-left">1</a>
-          <a class="button button-clear ion-chatbubbles icon-left">5</a>
-          <a class="button button-clear ion-ios-locked icon-left"></a>
-        </p>
-      </div>
-      <div class="item">
-        <div class="item-header">
-          <span>Berlin</span>
-          <p>1m ago</p>
-          <div style="clear:both;"></div>
-        </div>
-        <p>
-          <a class="button button-clear ion-heart icon-left">1</a>
-          <a class="button button-clear ion-chatbubbles icon-left">5</a>
-          <a class="button button-clear ion-ios-locked icon-left"></a>
-        </p>
-      </div>
-      <div class="item">
-        <div class="item-header">
-          <span>Berlin</span>
-          <p>1m ago</p>
-          <div style="clear:both;"></div>
-        </div>
-        <p>
-          <a class="button button-clear ion-heart icon-left">1</a>
-          <a class="button button-clear ion-chatbubbles icon-left">5</a>
-          <a class="button button-clear ion-ios-locked icon-left"></a>
-        </p>
-      </div>
-      <div class="item">
-        <div class="item-header">
-          <span>Berlin</span>
-          <p>1m ago</p>
-          <div style="clear:both;"></div>
-        </div>
-        <p>
-          <a class="button button-clear ion-heart icon-left">1</a>
-          <a class="button button-clear ion-chatbubbles icon-left">5</a>
-          <a class="button button-clear ion-ios-locked icon-left"></a>
-        </p>
-      </div>
+      
     </div>
-
-  </div>
   </ion-content>
 </ion-view>

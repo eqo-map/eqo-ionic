@@ -85,7 +85,7 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('RecordCtrl', function($scope, $interval, $ionicLoading, $timeout, $ionicModal, $location, Friends) {
+.controller('RecordCtrl', function($scope, $interval, $ionicLoading, $timeout, $ionicModal, $location, Friends, $ionicPopup) {
   $scope.recording = false;
   $scope.text = 'Start recording';
   $scope.time = 0;
@@ -116,7 +116,10 @@ angular.module('starter.controllers', [])
 
   $scope.share = function(){
     $scope.modal.hide();
-    $location.path('/tab/feed');
+    $ionicPopup.alert({
+     title: 'Your recording was shared successfully'
+   });
+    $location.path('/tab/map');
   };
 
   $scope.back = function(){

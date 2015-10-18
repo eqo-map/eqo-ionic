@@ -45,7 +45,14 @@
 }
 
 .feed-list .item {
-	padding-bottom: 0px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-right: 6px;
+	padding-left: 12px;
+}
+
+.feed-list .item-content {
+	padding-left: 10px;
 }
 
 .friend-upload img {
@@ -73,10 +80,25 @@
 
 .ago {
 	float: right;
-	margin-top: 15px;
 	font-size: 14px;
 }
 
 .item-header p {
-	font-size: 18px;
+	font-size: 17px;
+}
+
+.profile-img {
+	width: 30%;
+	height: 30%;
+	border-radius: 50%;
+	float: left;
+	margin-right: 10px;
+}
+
+.profile .item {
+	padding: 10px;
+}
+
+.profile button.edit-profile {
+	float: right;
 }
