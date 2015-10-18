@@ -4,8 +4,8 @@ angular.module('starter.services', [])
   var stories = [
     {
       id: 0,
-      title: 'An untold story about Brandenburger tor',
-      description: 'A story about brandenburger tor from the point of horse.',
+      title: 'Love message for you',
+      description: 'Really miss you honey',
       geo: {
         lat:52.5140, lng:13.3766
       },
@@ -13,15 +13,15 @@ angular.module('starter.services', [])
         id: 53730636
       },
       user: Friends.get(1) ,
-      likes: 5,
+      likes: 1,
       comments: 3,
       private: true,
-      posted: '1m ago'
+      posted: '1 minute ago'
     },
     {
       id: 1,
-      title: '2An untold story about Brandenburger tor',
-      description: '2A story about brandenburger tor from the point of horse.',
+      title: 'History of Brandenburger Tor',
+      description: '',
       geo: {
         lat:52.5159, lng:13.3777
       },
@@ -29,10 +29,58 @@ angular.module('starter.services', [])
         id: 53730637
       },
       user: Friends.get(2),
-      likes: 12,
-      comments: 1,
+      likes: 56,
+      comments: 24,
       private: false,
-      posted: '20m ago'
+      posted: '20 minutes ago'
+    },
+    {
+      id: 2,
+      title: 'Hello from Bahamy',
+      description: 'Family on holiday',
+      geo: {
+        lat:52.5159, lng:13.3777
+      },
+      soundcloud: {
+        id: 53730637
+      },
+      user: Friends.get(4),
+      likes: 18,
+      comments: 6,
+      private: false,
+      posted: '4 days ago'
+    },
+    {
+      id: 3,
+      title: 'Never forget',
+      description: 'An untold story',
+      geo: {
+        lat:52.5159, lng:13.3777
+      },
+      soundcloud: {
+        id: 53730637
+      },
+      user: Friends.get(3),
+      likes: 1,
+      comments: 2,
+      private: true,
+      posted: '2 months ago'
+    },
+    {
+      id: 1,
+      title: 'Trip of the best friends',
+      description: 'Funny stories from Berlin',
+      geo: {
+        lat:52.5159, lng:13.3777
+      },
+      soundcloud: {
+        id: 53730637
+      },
+      user: Friends.get(1),
+      likes: 24,
+      comments: 17,
+      private: true,
+      posted: '1 year ago'
     }
   ];
 
