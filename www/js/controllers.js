@@ -64,19 +64,20 @@ angular.module('starter.controllers', [])
   console.log('MapCtrl');
 })
 
-.controller('FeedCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('FeedCtrl', function($scope, $ionicModal, Stories) {
+  $scope.stories = Stories.all();
+  console.log($scope.stories);
+  $ionicModal.fromTemplateUrl('templates/modal-story.html', {
+    scope: $scope,
+    animation: 'slide-in-up'
+  }).then(function(modal) {
+    $scope.modal = modal;
+  });
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
+  $scope.show = function(){
+    $scope.modal.show();
   };
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
@@ -84,10 +85,11 @@ angular.module('starter.controllers', [])
 })
 
 
-.controller('RecordCtrl', function($scope, $interval, $ionicLoading, $timeout, $ionicModal) {
+.controller('RecordCtrl', function($scope, $interval, $ionicLoading, $timeout, $ionicModal, $location, Friends) {
   $scope.recording = false;
   $scope.text = 'Start recording';
   $scope.time = 0;
+  $scope.friends = Friends.all();
 
   $ionicModal.fromTemplateUrl('templates/modal-upload.html', {
     scope: $scope,
@@ -110,6 +112,15 @@ angular.module('starter.controllers', [])
       $ionicLoading.hide();
       $scope.modal.show();
     },500);
+  };
+
+  $scope.share = function(){
+    $scope.modal.hide();
+    $location.path('/tab/feed');
+  };
+
+  $scope.back = function(){
+    $scope.modal.hide();
   };
 
   $interval(function(){

@@ -40,11 +40,43 @@
 }
 
 
-
 .recording .ion-ios-circle-outline:before {
 	color:#b2b2b2;
 }
 
-.item-header {
+.feed-list .item {
+	padding-bottom: 0px;
+}
+
+.friend-upload img {
+	width: 10%;
+	height: 10%;
 	float: right;
+	border-radius: 50%;
+}
+
+.item-face {
+	width: 7%;
+	height: 7%;
+	border-radius: 50%;
+	margin-top: 10px;
+	float: left;
+}
+
+.item-username {
+	margin-top: 12px;
+	margin-left: 6px;
+	margin-right: 12px;
+	float: left;
+
+}
+
+.ago {
+	float: right;
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+.item-header p {
+	font-size: 18px;
 }
